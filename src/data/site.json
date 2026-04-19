@@ -1,0 +1,13 @@
+{
+  "author": {
+    "name": "Sounak Das",
+    "github": "https://github.com/sounakdas",
+    "website": "https://sounakdas.in",
+    "npm": "https://www.npmjs.com/~sounakdas",
+    "tagline": "Building tools that developers love"
+  },
+  "meta": {
+    "title": "npm.sounakdas.in",
+    "description": "A curated collection of open-source npm packages"
+  }
+}
