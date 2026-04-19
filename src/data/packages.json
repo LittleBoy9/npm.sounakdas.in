@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pkg-1",
+    "name": "@sounakdas/react-hooks",
+    "description": "A collection of powerful, reusable React hooks for common patterns like debounce, throttle, local storage, and more.",
+    "version": "2.4.1",
+    "downloads": "12.5k/week",
+    "license": "MIT",
+    "tags": ["react", "hooks", "utilities"],
+    "npm": "https://www.npmjs.com/package/@sounakdas/react-hooks",
+    "github": "https://github.com/sounakdas/react-hooks",
+    "color": "#61DAFB",
+    "icon": "⚛️"
+  },
+  {
+    "id": "pkg-2",
+    "name": "super-logger",
+    "description": "A zero-dependency, blazing-fast structured logger for Node.js with colorized output, log levels, and file rotation.",
+    "version": "3.1.0",
+    "downloads": "8.2k/week",
+    "license": "MIT",
+    "tags": ["node", "logger", "cli"],
+    "npm": "https://www.npmjs.com/package/super-logger",
+    "github": "https://github.com/sounakdas/super-logger",
+    "color": "#F7DF1E",
+    "icon": "📝"
+  },
+  {
+    "id": "pkg-3",
+    "name": "css-fusion",
+    "description": "Utility-first CSS-in-JS engine with near-zero runtime, atomic class generation, and theme support.",
+    "version": "1.8.3",
+    "downloads": "5.7k/week",
+    "license": "MIT",
+    "tags": ["css", "styling", "design-system"],
+    "npm": "https://www.npmjs.com/package/css-fusion",
+    "github": "https://github.com/sounakdas/css-fusion",
+    "color": "#FF6B6B",
+    "icon": "🎨"
+  },
+  {
+    "id": "pkg-4",
+    "name": "api-forge",
+    "description": "Type-safe REST & GraphQL API client generator with automatic caching, retry logic, and request deduplication.",
+    "version": "4.0.2",
+    "downloads": "15.3k/week",
+    "license": "Apache-2.0",
+    "tags": ["api", "rest", "graphql", "typescript"],
+    "npm": "https://www.npmjs.com/package/api-forge",
+    "github": "https://github.com/sounakdas/api-forge",
+    "color": "#A855F7",
+    "icon": "🔧"
+  },
+  {
+    "id": "pkg-5",
+    "name": "env-shield",
+    "description": "Validate and type-check environment variables at build time. Never deploy with missing config again.",
+    "version": "1.2.0",
+    "downloads": "3.1k/week",
+    "license": "MIT",
+    "tags": ["env", "validation", "devops"],
+    "npm": "https://www.npmjs.com/package/env-shield",
+    "github": "https://github.com/sounakdas/env-shield",
+    "color": "#10B981",
+    "icon": "🛡️"
+  },
+  {
+    "id": "pkg-6",
+    "name": "markdown-x",
+    "description": "Extended Markdown parser with custom directives, syntax highlighting, math equations, and diagram support.",
+    "version": "2.0.5",
+    "downloads": "6.8k/week",
+    "license": "MIT",
+    "tags": ["markdown", "parser", "documentation"],
+    "npm": "https://www.npmjs.com/package/markdown-x",
+    "github": "https://github.com/sounakdas/markdown-x",
+    "color": "#F97316",
+    "icon": "📄"
+  }
+]

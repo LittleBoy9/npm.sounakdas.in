@@ -1,0 +1,278 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 540px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+.modal-glow, .modal-glow-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  pointer-events: none;
+}
+
+.modal-glow-2 {
+  top: auto;
+  bottom: 0;
+  height: 150px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-icon {
+  font-size: 1.8rem;
+}
+
+.modal-name {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.modal-version-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.modal-version {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.modal-license {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 1px 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+
+.modal-description {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.meta-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-muted);
+}
+
+.meta-card svg {
+  flex-shrink: 0;
+}
+
+.meta-card-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  display: block;
+}
+
+.meta-card-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-tag {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.modal-install {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-install:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(108, 99, 255, 0.2);
+}
+
+.install-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.install-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.install-copy {
+  font-size: 0.65rem;
+  color: #6c63ff;
+  font-weight: 500;
+}
+
+.install-command {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.install-prompt {
+  color: #6c63ff;
+  margin-right: 0.5rem;
+}
+
+.modal-links {
+  display: flex;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.modal-link:hover {
+  transform: translateY(-2px);
+}
+
+.npm-link {
+  background: var(--link-color, rgba(108, 99, 255, 0.08));
+  border-color: var(--link-color, rgba(108, 99, 255, 0.15));
+}
+
+.npm-link:hover {
+  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.2);
+}
+
+.github-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: 1rem;
+    align-items: flex-end;
+  }
+  .modal-content {
+    border-radius: 24px 24px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
