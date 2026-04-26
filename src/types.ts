@@ -3,11 +3,14 @@ export interface Package {
   name: string
   description: string
   version: string
-  downloads: string
+  weeklyDownloads: number
+  totalDownloads: number
   license: string
   tags: string[]
   npm: string
   github: string
+  homepage?: string
+  publishedAt: string
   color: string
   icon: string
 }
@@ -23,5 +26,6 @@ export interface SiteData {
   meta: {
     title: string
     description: string
+    verifiedAt: string
   }
 }

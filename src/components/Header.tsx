@@ -10,12 +10,14 @@ export function Header({ site }: HeaderProps) {
     <header className="site-header">
       <div className="header-inner">
         <a href="/" className="header-logo">
-          <span className="logo-bracket">{'{'}</span>
-          <span className="logo-text">npm</span>
-          <span className="logo-bracket">{'}'}</span>
+          <span className="logo-mark">npm</span>
+          <span className="logo-text">sounakdas</span>
         </a>
         <nav className="header-nav">
           <a href="#packages" className="nav-link">Packages</a>
+          <a href={site.author.website} target="_blank" rel="noopener noreferrer" className="nav-link">
+            Portfolio
+          </a>
           <a href={site.author.github} target="_blank" rel="noopener noreferrer" className="nav-link">
             GitHub
           </a>
