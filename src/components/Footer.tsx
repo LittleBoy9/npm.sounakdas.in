@@ -19,7 +19,7 @@ export function Footer({ site }: FooterProps) {
           <a href={site.author.npm} target="_blank" rel="noopener noreferrer">npm</a>
         </div>
         <div className="footer-copy">
-          <p>&copy; {new Date().getFullYear()} {site.author.name}. All rights reserved.</p>
+          <p>Verified against npm registry on {site.meta.verifiedAt}</p>
         </div>
       </div>
     </footer>

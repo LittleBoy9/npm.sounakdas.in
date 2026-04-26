@@ -4,10 +4,11 @@
     "github": "https://github.com/sounakdas",
     "website": "https://sounakdas.in",
     "npm": "https://www.npmjs.com/~sounakdas",
-    "tagline": "Building tools that developers love"
+    "tagline": "Public npm packages by Sounak Das"
   },
   "meta": {
     "title": "npm.sounakdas.in",
-    "description": "A curated collection of open-source npm packages"
+    "description": "A registry-style showcase for the public npm packages published by Sounak Das.",
+    "verifiedAt": "2026-04-26"
   }
 }

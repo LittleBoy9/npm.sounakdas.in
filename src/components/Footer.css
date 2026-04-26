@@ -2,12 +2,12 @@
   position: relative;
   z-index: 1;
   border-top: 1px solid var(--border);
-  background: rgba(10, 10, 15, 0.8);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
 }
 
 .footer-inner {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 3rem 2rem 2rem;
   display: flex;
@@ -21,14 +21,11 @@
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 1rem;
-  background: linear-gradient(135deg, #6c63ff, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
 }
 
 .footer-tagline {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   margin-top: 0.3rem;
 }
@@ -45,7 +42,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .footer-copy {

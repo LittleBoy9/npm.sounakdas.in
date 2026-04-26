@@ -1,8 +1,8 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.38);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,35 +13,20 @@
 .modal-content {
   position: relative;
   background: var(--bg-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
   padding: 2rem;
-  max-width: 540px;
+  max-width: 640px;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
-}
-
-.modal-glow, .modal-glow-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 250px;
-  pointer-events: none;
-}
-
-.modal-glow-2 {
-  top: auto;
-  bottom: 0;
-  height: 150px;
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.16);
 }
 
 .modal-close {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 8px;
@@ -52,38 +37,18 @@
 }
 
 .modal-close:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: #ececee;
   color: var(--text-primary);
-  transform: rotate(90deg);
 }
 
 .modal-header {
   display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 1.2rem;
-  position: relative;
-  z-index: 1;
-}
-
-.modal-icon-wrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  border: 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.modal-icon {
-  font-size: 1.8rem;
 }
 
 .modal-name {
   font-family: var(--font-mono);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -101,29 +66,33 @@
 }
 
 .modal-license {
-  font-size: 0.7rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
-  padding: 1px 6px;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  background: var(--bg-tertiary);
+  border-radius: 999px;
+}
+
+.modal-source {
+  font-size: 0.74rem;
+  color: var(--accent);
+  padding: 0.2rem 0.55rem;
+  background: rgba(203, 56, 55, 0.08);
+  border-radius: 999px;
 }
 
 .modal-description {
   color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.75;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .modal-meta-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .meta-card {
@@ -131,7 +100,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.8rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border);
   border-radius: 12px;
   color: var(--text-muted);
@@ -161,33 +130,31 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .modal-tag {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-family: var(--font-mono);
-  padding: 3px 10px;
-  border-radius: 6px;
-  border: 1px solid;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
 }
 
 .modal-install {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border);
+  background: #111827;
+  border: 1px solid #1f2937;
   border-radius: 12px;
   padding: 0.8rem 1rem;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .modal-install:hover {
-  background: rgba(0, 0, 0, 0.4);
-  border-color: rgba(108, 99, 255, 0.2);
+  background: #0f172a;
+  border-color: #374151;
 }
 
 .install-header {
@@ -201,31 +168,30 @@
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text-muted);
+  color: #9ca3af;
 }
 
 .install-copy {
   font-size: 0.65rem;
-  color: #6c63ff;
+  color: #fca5a5;
   font-weight: 500;
 }
 
 .install-command {
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  color: var(--text-primary);
+  color: #f8fafc;
 }
 
 .install-prompt {
-  color: #6c63ff;
+  color: #f87171;
   margin-right: 0.5rem;
 }
 
 .modal-links {
   display: flex;
   gap: 0.75rem;
-  position: relative;
-  z-index: 1;
+  flex-wrap: wrap;
 }
 
 .modal-link {
@@ -239,26 +205,29 @@
   font-weight: 500;
   transition: all 0.3s ease;
   flex: 1;
+  min-width: 150px;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-tertiary);
 }
 
 .modal-link:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .npm-link {
-  background: var(--link-color, rgba(108, 99, 255, 0.08));
-  border-color: var(--link-color, rgba(108, 99, 255, 0.15));
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 .npm-link:hover {
-  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.2);
+  background: var(--accent-dark);
+  box-shadow: 0 8px 24px rgba(203, 56, 55, 0.18);
 }
 
-.github-link:hover {
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+.github-link:hover,
+.homepage-link:hover {
+  background: #ececee;
 }
 
 @media (max-width: 768px) {
@@ -266,13 +235,19 @@
     padding: 1rem;
     align-items: flex-end;
   }
+
   .modal-content {
     border-radius: 24px 24px 0 0;
     max-height: 90vh;
     overflow-y: auto;
-  }
-}
-  .modal-content {
     padding: 1.5rem;
+  }
+
+  .modal-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-links {
+    flex-direction: column;
   }
 }
