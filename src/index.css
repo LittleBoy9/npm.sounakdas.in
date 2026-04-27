@@ -19,8 +19,8 @@
   --accent-soft: rgba(203, 56, 55, 0.08);
   --border: rgba(23, 23, 23, 0.08);
   --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-  --font-body: 'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', 'Consolas', monospace;
+  --font-body: 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', 'Consolas', monospace;
 }
 
 html {
