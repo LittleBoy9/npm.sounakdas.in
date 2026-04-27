@@ -1,9 +1,15 @@
+import { useEffect, useState } from 'react'
 import type { Package, SiteData } from '../types'
 import './HeroScene.css'
 
 interface HeroSceneProps {
   packages: Package[]
   site: SiteData
+}
+
+function formatCount(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1).replace(/\.0$/, '')}k`
+  return String(n)
 }
 
 function totalWeeklyDownloads(packages: Package[]) {
@@ -17,7 +23,22 @@ function totalLifetimeDownloads(packages: Package[]) {
 export function HeroScene({ packages, site }: HeroSceneProps) {
   const weeklyDownloads = totalWeeklyDownloads(packages)
   const lifetimeDownloads = totalLifetimeDownloads(packages)
-  const leadPackage = packages[0]
+
+  const [cmdIndex, setCmdIndex] = useState(0)
+  const [cmdVisible, setCmdVisible] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCmdVisible(false)
+      setTimeout(() => {
+        setCmdIndex(i => (i + 1) % packages.length)
+        setCmdVisible(true)
+      }, 280)
+    }, 2600)
+    return () => clearInterval(interval)
+  }, [packages.length])
+
+  const marqueeItems = [...packages, ...packages]
 
   return (
     <section className="hero-scene">
@@ -48,7 +69,6 @@ export function HeroScene({ packages, site }: HeroSceneProps) {
         <div className="hero-panel">
           <div className="hero-panel-header">
             <span className="hero-panel-label">Portfolio snapshot</span>
-            <span className="hero-panel-pill">verified {site.meta.verifiedAt}</span>
           </div>
 
           <div className="hero-stats">
@@ -57,26 +77,41 @@ export function HeroScene({ packages, site }: HeroSceneProps) {
               <span className="stat-label">Packages published</span>
             </div>
             <div className="stat">
-              <span className="stat-value">{weeklyDownloads} downloads</span>
+              <span className="stat-value">{formatCount(weeklyDownloads)}</span>
               <span className="stat-label">Weekly downloads</span>
             </div>
             <div className="stat">
-              <span className="stat-value">{lifetimeDownloads} downloads</span>
-              <span className="stat-label">Total downloads to date</span>
+              <span className="stat-value">{formatCount(lifetimeDownloads)}</span>
+              <span className="stat-label">Total downloads</span>
             </div>
           </div>
 
           <div className="hero-command">
             <span className="hero-command-prompt">$</span>
-            <span>npm i {leadPackage?.name ?? 'package-name'}</span>
+            <span
+              className="hero-command-pkg"
+              style={{ opacity: cmdVisible ? 1 : 0 }}
+            >
+              npm i {packages[cmdIndex]?.name}
+            </span>
           </div>
 
-          <div className="hero-tags">
-            <span>developer tools</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>CLI</span>
-            <span>UI utilities</span>
+          <div className="hero-marquee">
+            <div
+              className="hero-marquee-track"
+              style={{ '--marquee-count': packages.length } as React.CSSProperties}
+            >
+              {marqueeItems.map((pkg, i) => (
+                <span
+                  key={`${pkg.id}-${i}`}
+                  className="hero-pkg-chip"
+                  style={{ '--pkg-color': pkg.color } as React.CSSProperties}
+                >
+                  <span className="chip-icon">{pkg.icon}</span>
+                  <span className="chip-name">{pkg.name}</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
