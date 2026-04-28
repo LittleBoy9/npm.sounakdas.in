@@ -1,0 +1,5 @@
+{
+  "buildCommand": "bun run deploy",
+  "outputDirectory": "dist",
+  "installCommand": "bun install"
+}
