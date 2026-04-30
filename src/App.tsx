@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Seo } from './components/Seo'
+import { GoogleAnalytics } from './components/GoogleAnalytics'
 import { HeroScene } from './components/HeroScene'
 import { AboutStrip } from './components/AboutStrip'
 import { PackageGrid } from './components/PackageGrid'
@@ -16,9 +17,12 @@ function App() {
   const packages = packagesData as Package[]
   const site = siteData as SiteData
 
+  const gaId = import.meta.env.VITE_GA_ID
+
   return (
     <div className="app">
       <Seo packages={packages} site={site} />
+      {gaId && <GoogleAnalytics gaId={gaId} />}
       <Header site={site} />
       <main>
         <HeroScene packages={packages} site={site} />

@@ -74,6 +74,14 @@ src/components/
 - `public/sitemap.xml` and `public/robots.txt` are in public/
 - `public/og.svg` is the social preview card (1200×630)
 
+## Analytics
+Google Analytics 4 loads only if `VITE_GA_ID` is defined (format `G-XXXXXXXXXX`). The `GoogleAnalytics` component (`src/components/GoogleAnalytics.tsx`) injects the gtag.js loader + init script at runtime. If the env var is unset, no GA code is added at all.
+
+Vite requires the `VITE_` prefix to expose env vars to the client. Plain `GA_ID` will not work.
+
+- Local dev: `.env.local` (gitignored)
+- Production: Vercel dashboard → Environment Variables → `VITE_GA_ID`
+
 ## Deployment
 Hosted on Vercel. Config is in `vercel.json`:
 - **Build command:** `bun run deploy` — runs the npm sync script then builds. This means every Vercel deployment pulls fresh download counts and versions from the npm registry automatically.

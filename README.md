@@ -83,6 +83,15 @@ public/
   sitemap.xml
 ```
 
+## Analytics
+
+Google Analytics is optional. If `VITE_GA_ID` is set, GA4 scripts are injected at runtime; if unset, no GA code loads at all.
+
+- **Local:** copy `.env.example` to `.env.local` and set `VITE_GA_ID=G-XXXXXXXXXX`
+- **Production:** add `VITE_GA_ID` in Vercel project settings → Environment Variables
+
+> Vite requires the `VITE_` prefix to expose env vars to the client. Plain `GA_ID` will not work.
+
 ## Deployment
 
 Hosted on Vercel. Push to `main` and Vercel deploys automatically.
