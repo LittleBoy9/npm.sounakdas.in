@@ -66,3 +66,19 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(203, 56, 55, 0.55);
 }
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-track {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

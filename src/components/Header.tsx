@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { SiteData } from '../types'
 import './Header.css'
 
@@ -9,12 +10,12 @@ export function Header({ site }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a href="/" className="header-logo">
+        <Link to="/" className="header-logo">
           <span className="logo-mark">npm</span>
           <span className="logo-text">sounakdas</span>
-        </a>
+        </Link>
         <nav className="header-nav">
-          <a href="#packages" className="nav-link">Packages</a>
+          <Link to="/#packages" className="nav-link">Packages</Link>
           <a href={site.author.website} target="_blank" rel="noopener noreferrer" className="nav-link">
             Portfolio
           </a>

@@ -53,10 +53,10 @@ export function HeroScene({ packages, site }: HeroSceneProps) {
             <span className="hero-title-accent"> on npm</span>
           </h1>
           <p className="hero-lead">
-            I publish small, focused packages for developers.
+            I build developer tools and open-source infrastructure for the JavaScript ecosystem.
           </p>
           <p className="hero-subtitle">
-            This site is my package portfolio: the tools, UI libraries, experiments, and reusable modules I have shipped under <code>sounakdas</code>.
+            From CLI dashboards and Node.js diagnostics to React libraries and browser SDKs — production-ready packages shipped under <code>sounakdas</code>.
           </p>
           <div className="hero-cta-group">
             <a href="#packages" className="hero-cta-primary">Explore my packages</a>

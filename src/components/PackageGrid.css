@@ -248,7 +248,16 @@
   margin-bottom: 1.2rem;
 }
 
+.card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
 .card-tag {
+  position: relative;
+  z-index: 2;
   font-size: 0.7rem;
   font-family: var(--font-mono);
   padding: 0.3rem 0.55rem;
@@ -354,7 +363,7 @@
 
 @media (max-width: 768px) {
   .package-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .package-grid-section {
