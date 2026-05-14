@@ -28,9 +28,9 @@ export function AboutStrip({ site }: AboutStripProps) {
           <div className="about-text">
             <p className="about-name">Sounak Das</p>
             <p className="about-bio">
-              Indie developer building open-source tools for the JavaScript ecosystem.
-              I focus on DX — small, focused packages that solve real problems without
-              unnecessary dependencies.
+              I ship cross-stack developer tools that prioritize performance, DX, and
+              solving real problems. From terminal monitoring to virtualized grids,
+              every package is built to production standards with minimal overhead.
             </p>
             <div className="about-links">
               <a href={site.author.github} target="_blank" rel="noopener noreferrer" className="about-link">

@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Package } from '../types'
 import './PackageGrid.css'
 
 interface PackageGridProps {
   packages: Package[]
-  onSelect: (pkg: Package) => void
 }
 
 function formatCount(n: number): string {
@@ -13,20 +13,20 @@ function formatCount(n: number): string {
   return String(n)
 }
 
-export function PackageGrid({ packages, onSelect }: PackageGridProps) {
+export function PackageGrid({ packages }: PackageGridProps) {
   const [activeTag, setActiveTag] = useState<string | null>(null)
   const totalDownloads = packages.reduce((sum, p) => sum + p.totalDownloads, 0)
 
   const tags = useMemo(() => {
     const freq: Record<string, number> = {}
-    packages.forEach(p => p.tags.forEach(t => { freq[t] = (freq[t] || 0) + 1 }))
+    packages.forEach((p) => p.tags.forEach((t) => { freq[t] = (freq[t] || 0) + 1 }))
     return Object.entries(freq)
       .sort((a, b) => b[1] - a[1])
       .map(([tag]) => tag)
   }, [packages])
 
   const filtered = activeTag
-    ? packages.filter(p => p.tags.includes(activeTag))
+    ? packages.filter((p) => p.tags.includes(activeTag))
     : packages
 
   return (
@@ -80,15 +80,15 @@ export function PackageGrid({ packages, onSelect }: PackageGridProps) {
           All
           <span className="tag-filter-count">{packages.length}</span>
         </button>
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <button
             key={tag}
             className={`tag-filter-chip ${activeTag === tag ? 'active' : ''}`}
-            onClick={() => setActiveTag(prev => prev === tag ? null : tag)}
+            onClick={() => setActiveTag((prev) => (prev === tag ? null : tag))}
           >
             {tag}
             <span className="tag-filter-count">
-              {packages.filter(p => p.tags.includes(tag)).length}
+              {packages.filter((p) => p.tags.includes(tag)).length}
             </span>
           </button>
         ))}
@@ -106,9 +106,14 @@ export function PackageGrid({ packages, onSelect }: PackageGridProps) {
               exit={{ opacity: 0, scale: 0.96 }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.22 }}
-              onClick={() => onSelect(pkg)}
               style={{ '--pkg-color': pkg.color } as React.CSSProperties}
             >
+              <Link
+                to={`/packages/${pkg.id}`}
+                className="card-link-overlay"
+                aria-label={`View ${pkg.name} details`}
+              />
+
               <div className="card-accent" />
 
               <div className="card-header">
@@ -134,7 +139,7 @@ export function PackageGrid({ packages, onSelect }: PackageGridProps) {
                     className={`card-tag ${activeTag === tag ? 'card-tag-active' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation()
-                      setActiveTag(prev => prev === tag ? null : tag)
+                      setActiveTag((prev) => (prev === tag ? null : tag))
                     }}
                   >
                     {tag}
