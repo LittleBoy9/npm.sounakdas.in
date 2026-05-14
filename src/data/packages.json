@@ -5,7 +5,7 @@
     "description": "Zero-config, one-line terminal dashboard for Node.js apps. Real-time CPU, memory, event loop, HTTP metrics, and logs.",
     "version": "1.0.1",
     "weeklyDownloads": 12,
-    "totalDownloads": 276,
+    "totalDownloads": 280,
     "license": "MIT",
     "tags": [
       "nodejs",
@@ -26,7 +26,7 @@
     "description": "Configure once, log everywhere. A lightweight colored logger for Node.js with a clean developer experience.",
     "version": "1.0.1",
     "weeklyDownloads": 12,
-    "totalDownloads": 307,
+    "totalDownloads": 309,
     "license": "MIT",
     "tags": [
       "logger",
@@ -47,7 +47,7 @@
     "description": "Ultra-light React skeleton loader with zero DOM scanning, JSX inference, shimmer, and pulse animations.",
     "version": "0.1.4",
     "weeklyDownloads": 16,
-    "totalDownloads": 524,
+    "totalDownloads": 533,
     "license": "MIT",
     "tags": [
       "react",
@@ -68,7 +68,7 @@
     "description": "Zero-config CLI to analyze Git history and surface risky files, churn hotspots, and knowledge silos.",
     "version": "2.0.2",
     "weeklyDownloads": 10,
-    "totalDownloads": 329,
+    "totalDownloads": 334,
     "license": "MIT",
     "tags": [
       "git",
@@ -89,7 +89,7 @@
     "description": "Lightweight local log diagnostics for NestJS, Express, and Node.js with real-time UI and error tracing.",
     "version": "1.0.1",
     "weeklyDownloads": 11,
-    "totalDownloads": 513,
+    "totalDownloads": 517,
     "license": "MIT",
     "tags": [
       "nestjs",
@@ -173,7 +173,7 @@
     "description": "A zero-dependency, virtualized masonry grid layout library built for performant responsive layouts.",
     "version": "0.2.1",
     "weeklyDownloads": 12,
-    "totalDownloads": 365,
+    "totalDownloads": 368,
     "license": "MIT",
     "tags": [
       "masonry",
