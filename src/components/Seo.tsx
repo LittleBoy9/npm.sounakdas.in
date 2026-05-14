@@ -16,12 +16,12 @@ export function Seo({ packages, site, activePackage }: SeoProps) {
         metaDesc.setAttribute('content', activePackage.description)
       }
     } else {
-      document.title = `${site.author.name} · npm Packages — Open Source JavaScript & TypeScript Tools`
+      document.title = `${site.author.name} · npm Packages & Developer Tools`
       const metaDesc = document.querySelector('meta[name="description"]')
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          'Browse open source npm packages by Sounak Das — CLI tools, React UI components, Node.js utilities, and TypeScript libraries. MIT licensed, zero-dependency, built for developer experience.'
+          'Open source npm packages by Sounak Das — CLI tools, React libraries, Node.js utilities, and TypeScript packages. MIT licensed, zero-dependency.'
         )
       }
     }
