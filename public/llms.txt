@@ -1,0 +1,28 @@
+# npm.sounakdas.in
+
+> Open source npm packages by Sounak Das — CLI tools, React libraries,
+> Node.js utilities, and TypeScript packages. All MIT licensed.
+
+Author: Sounak Das
+npm profile: https://www.npmjs.com/~sounakdas
+GitHub: https://github.com/LittleBoy9
+Portfolio: https://sounakdas.in
+Package data verified: 2026-08-25
+
+## Packages (11)
+
+- [termiwatch](https://npm.sounakdas.in/packages/termiwatch): Zero-config, one-line terminal dashboard for Node.js apps. Real-time CPU, memory, event loop, HTTP metrics, and logs. Version 1.0.1, MIT licensed, 3 weekly / 357 total downloads. Install with `npm install termiwatch`. Tags: nodejs, cli, monitoring, observability. Source: https://github.com/LittleBoy9/termiwatch
+- [logpaint](https://npm.sounakdas.in/packages/logpaint): Configure once, log everywhere. A lightweight colored logger for Node.js with a clean developer experience. Version 1.0.1, MIT licensed, 2 weekly / 370 total downloads. Install with `npm install logpaint`. Tags: logger, node, typescript, terminal. Source: https://github.com/LittleBoy9/logpaint
+- [instaskeleton](https://npm.sounakdas.in/packages/instaskeleton): Ultra-light React skeleton loader with zero DOM scanning, JSX inference, shimmer, and pulse animations. Version 0.1.4, MIT licensed, 5 weekly / 697 total downloads. Install with `npm install instaskeleton`. Tags: react, loading, skeleton, ui. Source: https://github.com/LittleBoy9/instaskeleton
+- [git-vision](https://npm.sounakdas.in/packages/git-vision): Zero-config CLI to analyze Git history and surface risky files, churn hotspots, and knowledge silos. Version 2.0.2, MIT licensed, 5 weekly / 463 total downloads. Install with `npm install git-vision`. Tags: git, analysis, cli, devtools. Source: https://github.com/LittleBoy9/git-vision
+- [dev-log-monitor](https://npm.sounakdas.in/packages/dev-log-monitor): Lightweight local log diagnostics for NestJS, Express, and Node.js with real-time UI and error tracing. Version 1.0.1, MIT licensed, 4 weekly / 655 total downloads. Install with `npm install dev-log-monitor`. Tags: nestjs, express, logs, debugging. Source: https://github.com/LittleBoy9/dev-log-monitor
+- [quickfuzz](https://npm.sounakdas.in/packages/quickfuzz): Blazing-fast, zero-dependency fuzzy search for JavaScript and TypeScript, optimized for small datasets. Version 1.0.2, MIT licensed, 26 weekly / 443 total downloads. Install with `npm install quickfuzz`. Tags: search, fuzzy, typescript, browser. Source: https://github.com/LittleBoy9/quickfuzz
+- [ghostbug](https://npm.sounakdas.in/packages/ghostbug): Zero-config browser SDK for automatic bug context collection, breadcrumbs, and frontend debugging signals. Version 0.2.0, MIT licensed, 5 weekly / 421 total downloads. Install with `npm install ghostbug`. Tags: browser, sdk, debugging, qa. Source: https://github.com/LittleBoy9/ghostbug
+- [rgb-curve](https://npm.sounakdas.in/packages/rgb-curve): A fast, lightweight RGB curve editor component for React, aimed at Lightroom and Premiere style color grading. Version 1.0.2, MIT licensed, 4 weekly / 556 total downloads. Install with `npm install rgb-curve`. Tags: react, color, editor, visual. Source: https://github.com/LittleBoy9/rgb-curve
+- [smart-masonry-grid](https://npm.sounakdas.in/packages/smart-masonry-grid): A zero-dependency, virtualized masonry grid layout library built for performant responsive layouts. Version 0.2.1, MIT licensed, 5 weekly / 450 total downloads. Install with `npm install smart-masonry-grid`. Tags: masonry, grid, layout, performance. Source: https://github.com/LittleBoy9/smart-masonry-grid
+- [motionchart](https://npm.sounakdas.in/packages/motionchart): Cinematic React chart library focused on animated storytelling, motion, and presentation-first data visuals. Version 0.2.0, MIT licensed, 5 weekly / 379 total downloads. Install with `npm install motionchart`. Tags: react, charts, animation, svg. Source: https://github.com/LittleBoy9/motionchart
+- [changelog-from-commits](https://npm.sounakdas.in/packages/changelog-from-commits): Generate a polished CHANGELOG.md from git history using Conventional Commits. Zero config, zero runtime dependencies, monorepo and gitmoji aware. Version 0.1.1, MIT licensed, 290 weekly / 290 total downloads. Install with `npm install changelog-from-commits`. Tags: changelog, conventional-commits, cli, git. Source: https://github.com/LittleBoy9/changelog-from-commits
+
+## Optional
+
+- [npm profile](https://www.npmjs.com/~sounakdas)

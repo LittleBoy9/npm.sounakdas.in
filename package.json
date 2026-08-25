@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir .ssr-build && node scripts/prerender.js",
     "preview": "vite preview",
     "sync": "node scripts/sync-packages.js",
-    "deploy": "node scripts/sync-packages.js && tsc -b && vite build"
+    "deploy": "node scripts/sync-packages.js && bun run build",
+    "prerender": "node scripts/prerender.js"
   },
   "dependencies": {
     "framer-motion": "^12.7.3",

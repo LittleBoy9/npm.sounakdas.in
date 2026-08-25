@@ -2,68 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://npm.sounakdas.in/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/termiwatch</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/logpaint</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/instaskeleton</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/git-vision</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/dev-log-monitor</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/quickfuzz</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/ghostbug</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/rgb-curve</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/smart-masonry-grid</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://npm.sounakdas.in/packages/motionchart</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://npm.sounakdas.in/packages/changelog-from-commits</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

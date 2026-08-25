@@ -4,8 +4,8 @@
     "name": "termiwatch",
     "description": "Zero-config, one-line terminal dashboard for Node.js apps. Real-time CPU, memory, event loop, HTTP metrics, and logs.",
     "version": "1.0.1",
-    "weeklyDownloads": 2,
-    "totalDownloads": 347,
+    "weeklyDownloads": 3,
+    "totalDownloads": 357,
     "license": "MIT",
     "tags": [
       "nodejs",
@@ -25,8 +25,8 @@
     "name": "logpaint",
     "description": "Configure once, log everywhere. A lightweight colored logger for Node.js with a clean developer experience.",
     "version": "1.0.1",
-    "weeklyDownloads": 3,
-    "totalDownloads": 361,
+    "weeklyDownloads": 2,
+    "totalDownloads": 370,
     "license": "MIT",
     "tags": [
       "logger",
@@ -46,8 +46,8 @@
     "name": "instaskeleton",
     "description": "Ultra-light React skeleton loader with zero DOM scanning, JSX inference, shimmer, and pulse animations.",
     "version": "0.1.4",
-    "weeklyDownloads": 7,
-    "totalDownloads": 681,
+    "weeklyDownloads": 5,
+    "totalDownloads": 697,
     "license": "MIT",
     "tags": [
       "react",
@@ -68,7 +68,7 @@
     "description": "Zero-config CLI to analyze Git history and surface risky files, churn hotspots, and knowledge silos.",
     "version": "2.0.2",
     "weeklyDownloads": 5,
-    "totalDownloads": 447,
+    "totalDownloads": 463,
     "license": "MIT",
     "tags": [
       "git",
@@ -88,8 +88,8 @@
     "name": "dev-log-monitor",
     "description": "Lightweight local log diagnostics for NestJS, Express, and Node.js with real-time UI and error tracing.",
     "version": "1.0.1",
-    "weeklyDownloads": 10,
-    "totalDownloads": 642,
+    "weeklyDownloads": 4,
+    "totalDownloads": 655,
     "license": "MIT",
     "tags": [
       "nestjs",
@@ -109,8 +109,8 @@
     "name": "quickfuzz",
     "description": "Blazing-fast, zero-dependency fuzzy search for JavaScript and TypeScript, optimized for small datasets.",
     "version": "1.0.2",
-    "weeklyDownloads": 5,
-    "totalDownloads": 408,
+    "weeklyDownloads": 26,
+    "totalDownloads": 443,
     "license": "MIT",
     "tags": [
       "search",
@@ -130,8 +130,8 @@
     "name": "ghostbug",
     "description": "Zero-config browser SDK for automatic bug context collection, breadcrumbs, and frontend debugging signals.",
     "version": "0.2.0",
-    "weeklyDownloads": 0,
-    "totalDownloads": 411,
+    "weeklyDownloads": 5,
+    "totalDownloads": 421,
     "license": "MIT",
     "tags": [
       "browser",
@@ -151,8 +151,8 @@
     "name": "rgb-curve",
     "description": "A fast, lightweight RGB curve editor component for React, aimed at Lightroom and Premiere style color grading.",
     "version": "1.0.2",
-    "weeklyDownloads": 3,
-    "totalDownloads": 541,
+    "weeklyDownloads": 4,
+    "totalDownloads": 556,
     "license": "MIT",
     "tags": [
       "react",
@@ -172,8 +172,8 @@
     "name": "smart-masonry-grid",
     "description": "A zero-dependency, virtualized masonry grid layout library built for performant responsive layouts.",
     "version": "0.2.1",
-    "weeklyDownloads": 2,
-    "totalDownloads": 438,
+    "weeklyDownloads": 5,
+    "totalDownloads": 450,
     "license": "MIT",
     "tags": [
       "masonry",
@@ -194,7 +194,7 @@
     "description": "Cinematic React chart library focused on animated storytelling, motion, and presentation-first data visuals.",
     "version": "0.2.0",
     "weeklyDownloads": 5,
-    "totalDownloads": 366,
+    "totalDownloads": 379,
     "license": "MIT",
     "tags": [
       "react",
@@ -208,5 +208,26 @@
     "publishedAt": "2026-05-15",
     "color": "#db2777",
     "icon": "MC"
+  },
+  {
+    "id": "changelog-from-commits",
+    "name": "changelog-from-commits",
+    "description": "Generate a polished CHANGELOG.md from git history using Conventional Commits. Zero config, zero runtime dependencies, monorepo and gitmoji aware.",
+    "version": "0.1.1",
+    "weeklyDownloads": 290,
+    "totalDownloads": 290,
+    "license": "MIT",
+    "tags": [
+      "changelog",
+      "conventional-commits",
+      "cli",
+      "git"
+    ],
+    "npm": "https://www.npmjs.com/package/changelog-from-commits",
+    "github": "https://github.com/LittleBoy9/changelog-from-commits",
+    "homepage": "https://littleboy9.github.io/changelog-from-commits/",
+    "publishedAt": "2026-08-23",
+    "color": "#16a34a",
+    "icon": "CC"
   }
 ]

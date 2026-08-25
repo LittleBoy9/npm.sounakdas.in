@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import type { Package, SiteData } from '../types'
+import { buildHomeMeta, buildPackageMeta, OG_IMAGE } from '../seo/meta'
+import type { PageMeta } from '../seo/meta'
 
 interface SeoProps {
   packages: Package[]
@@ -7,156 +9,67 @@ interface SeoProps {
   activePackage?: Package
 }
 
+function setMeta(selector: string, attr: 'name' | 'property', key: string, content: string) {
+  let el = document.head.querySelector<HTMLMetaElement>(selector)
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute(attr, key)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
+}
+
+function setLink(rel: string, href: string) {
+  let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`)
+  if (!el) {
+    el = document.createElement('link')
+    el.setAttribute('rel', rel)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('href', href)
+}
+
+/**
+ * Keeps the head in sync during client-side navigation. The first paint of every
+ * route is already correct thanks to the prerender step (scripts/prerender.js),
+ * which serializes this same PageMeta into static HTML — so this only matters
+ * once React Router takes over.
+ */
+function apply(meta: PageMeta) {
+  document.title = meta.title
+
+  setMeta('meta[name="description"]', 'name', 'description', meta.description)
+  setMeta('meta[name="robots"]', 'name', 'robots', meta.robots)
+  setLink('canonical', meta.canonical)
+
+  setMeta('meta[property="og:type"]', 'property', 'og:type', meta.ogType)
+  setMeta('meta[property="og:url"]', 'property', 'og:url', meta.canonical)
+  setMeta('meta[property="og:title"]', 'property', 'og:title', meta.title)
+  setMeta('meta[property="og:description"]', 'property', 'og:description', meta.description)
+  setMeta('meta[property="og:image"]', 'property', 'og:image', OG_IMAGE)
+  setMeta('meta[property="og:image:alt"]', 'property', 'og:image:alt', meta.imageAlt)
+
+  setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', meta.title)
+  setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', meta.description)
+  setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', OG_IMAGE)
+  setMeta('meta[name="twitter:image:alt"]', 'name', 'twitter:image:alt', meta.imageAlt)
+
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.id = 'structured-data'
+  script.textContent = JSON.stringify(meta.jsonLd)
+
+  document.getElementById('structured-data')?.remove()
+  document.head.appendChild(script)
+}
+
 export function Seo({ packages, site, activePackage }: SeoProps) {
   useEffect(() => {
-    if (activePackage) {
-      document.title = `${activePackage.name} — npm package by ${site.author.name}`
-      const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) {
-        metaDesc.setAttribute('content', activePackage.description)
-      }
-    } else {
-      document.title = `${site.author.name} · npm Packages & Developer Tools`
-      const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Open source npm packages by Sounak Das — CLI tools, React libraries, Node.js utilities, and TypeScript packages. MIT licensed, zero-dependency.'
-        )
-      }
-    }
-  }, [activePackage, site])
-
-  useEffect(() => {
-    let graph: unknown[]
-
-    if (activePackage) {
-      graph = [
-        {
-          '@type': 'SoftwareSourceCode',
-          '@id': `https://npm.sounakdas.in/packages/${activePackage.id}`,
-          name: activePackage.name,
-          description: activePackage.description,
-          url: `https://npm.sounakdas.in/packages/${activePackage.id}`,
-          codeRepository: activePackage.github,
-          version: activePackage.version,
-          datePublished: activePackage.publishedAt,
-          license: 'https://opensource.org/licenses/MIT',
-          programmingLanguage: {
-            '@type': 'ComputerLanguage',
-            name: 'TypeScript',
-          },
-          author: { '@id': 'https://npm.sounakdas.in/#person' },
-          keywords: activePackage.tags.join(', '),
-          ...(activePackage.homepage ? { sameAs: activePackage.homepage } : {}),
-        },
-        {
-          '@type': 'Person',
-          '@id': 'https://npm.sounakdas.in/#person',
-          name: site.author.name,
-          url: site.author.website,
-          sameAs: [
-            site.author.github,
-            site.author.npm,
-            site.author.website,
-          ],
-        },
-        {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Packages',
-              item: 'https://npm.sounakdas.in/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: activePackage.name,
-              item: `https://npm.sounakdas.in/packages/${activePackage.id}`,
-            },
-          ],
-        },
-      ]
-    } else {
-      graph = [
-        {
-          '@type': 'WebSite',
-          '@id': 'https://npm.sounakdas.in/#website',
-          url: 'https://npm.sounakdas.in',
-          name: 'npm.sounakdas.in',
-          description:
-            'Open source npm packages by Sounak Das — CLI tools, React components, Node.js utilities, TypeScript libraries.',
-          author: { '@id': 'https://npm.sounakdas.in/#person' },
-          inLanguage: 'en-US',
-        },
-        {
-          '@type': 'Person',
-          '@id': 'https://npm.sounakdas.in/#person',
-          name: site.author.name,
-          url: site.author.website,
-          sameAs: [
-            site.author.github,
-            site.author.npm,
-            site.author.website,
-          ],
-          knowsAbout: [
-            'JavaScript',
-            'TypeScript',
-            'React',
-            'Node.js',
-            'Open Source Software',
-            'npm',
-          ],
-        },
-        {
-          '@type': 'ItemList',
-          '@id': 'https://npm.sounakdas.in/#packages',
-          name: 'npm packages by Sounak Das',
-          description:
-            'Open source JavaScript and TypeScript packages published by Sounak Das on npm.',
-          numberOfItems: packages.length,
-          itemListElement: packages.map((pkg, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            item: {
-              '@type': 'SoftwareSourceCode',
-              '@id': pkg.npm,
-              name: pkg.name,
-              description: pkg.description,
-              url: `https://npm.sounakdas.in/packages/${pkg.id}`,
-              codeRepository: pkg.github,
-              version: pkg.version,
-              datePublished: pkg.publishedAt,
-              license: 'https://opensource.org/licenses/MIT',
-              programmingLanguage: {
-                '@type': 'ComputerLanguage',
-                name: 'TypeScript',
-              },
-              author: { '@id': 'https://npm.sounakdas.in/#person' },
-              keywords: pkg.tags.join(', '),
-              ...(pkg.homepage ? { sameAs: pkg.homepage } : {}),
-            },
-          })),
-        },
-      ]
-    }
-
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.id = 'structured-data'
-    script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@graph': graph,
-    })
-
-    document.getElementById('structured-data')?.remove()
-    document.head.appendChild(script)
-
-    return () => {
-      document.getElementById('structured-data')?.remove()
-    }
+    apply(
+      activePackage
+        ? buildPackageMeta(activePackage, site)
+        : buildHomeMeta(packages, site)
+    )
   }, [packages, site, activePackage])
 
   return null

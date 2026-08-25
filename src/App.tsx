@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
 import { PackagePage } from './pages/PackagePage'
+import { NotFoundPage } from './pages/NotFoundPage'
 import packagesData from './data/packages.json'
 import siteData from './data/site.json'
 import type { Package, SiteData } from './types'
@@ -31,6 +32,7 @@ function App() {
           path="/packages/:id"
           element={<PackagePage packages={packages} site={site} />}
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer site={site} />
     </div>
