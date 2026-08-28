@@ -7,3 +7,5 @@ tsconfig.tsbuildinfo
 .env
 .env.production
 .ssr-build
+.vercel
+.env*
