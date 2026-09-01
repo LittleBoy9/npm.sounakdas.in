@@ -5,7 +5,7 @@
     "description": "Zero-config, one-line terminal dashboard for Node.js apps. Real-time CPU, memory, event loop, HTTP metrics, and logs.",
     "version": "1.0.1",
     "weeklyDownloads": 3,
-    "totalDownloads": 357,
+    "totalDownloads": 365,
     "license": "MIT",
     "tags": [
       "nodejs",
@@ -25,8 +25,8 @@
     "name": "logpaint",
     "description": "Configure once, log everywhere. A lightweight colored logger for Node.js with a clean developer experience.",
     "version": "1.0.1",
-    "weeklyDownloads": 0,
-    "totalDownloads": 370,
+    "weeklyDownloads": 3,
+    "totalDownloads": 373,
     "license": "MIT",
     "tags": [
       "logger",
@@ -46,8 +46,8 @@
     "name": "instaskeleton",
     "description": "Ultra-light React skeleton loader with zero DOM scanning, JSX inference, shimmer, and pulse animations.",
     "version": "0.1.4",
-    "weeklyDownloads": 3,
-    "totalDownloads": 697,
+    "weeklyDownloads": 5,
+    "totalDownloads": 704,
     "license": "MIT",
     "tags": [
       "react",
@@ -67,8 +67,8 @@
     "name": "git-vision",
     "description": "Zero-config CLI to analyze Git history and surface risky files, churn hotspots, and knowledge silos.",
     "version": "2.0.2",
-    "weeklyDownloads": 3,
-    "totalDownloads": 463,
+    "weeklyDownloads": 2,
+    "totalDownloads": 465,
     "license": "MIT",
     "tags": [
       "git",
@@ -88,8 +88,8 @@
     "name": "dev-log-monitor",
     "description": "Lightweight local log diagnostics for NestJS, Express, and Node.js with real-time UI and error tracing.",
     "version": "1.0.1",
-    "weeklyDownloads": 2,
-    "totalDownloads": 655,
+    "weeklyDownloads": 5,
+    "totalDownloads": 660,
     "license": "MIT",
     "tags": [
       "nestjs",
@@ -109,8 +109,8 @@
     "name": "quickfuzz",
     "description": "Blazing-fast, zero-dependency fuzzy search for JavaScript and TypeScript, optimized for small datasets.",
     "version": "1.0.2",
-    "weeklyDownloads": 15,
-    "totalDownloads": 447,
+    "weeklyDownloads": 11,
+    "totalDownloads": 451,
     "license": "MIT",
     "tags": [
       "search",
@@ -130,8 +130,8 @@
     "name": "ghostbug",
     "description": "Zero-config browser SDK for automatic bug context collection, breadcrumbs, and frontend debugging signals.",
     "version": "0.2.0",
-    "weeklyDownloads": 2,
-    "totalDownloads": 421,
+    "weeklyDownloads": 1,
+    "totalDownloads": 422,
     "license": "MIT",
     "tags": [
       "browser",
@@ -151,8 +151,8 @@
     "name": "rgb-curve",
     "description": "A fast, lightweight RGB curve editor component for React, aimed at Lightroom and Premiere style color grading.",
     "version": "1.0.2",
-    "weeklyDownloads": 3,
-    "totalDownloads": 557,
+    "weeklyDownloads": 2,
+    "totalDownloads": 560,
     "license": "MIT",
     "tags": [
       "react",
@@ -173,7 +173,7 @@
     "description": "A zero-dependency, virtualized masonry grid layout library built for performant responsive layouts.",
     "version": "0.2.1",
     "weeklyDownloads": 2,
-    "totalDownloads": 450,
+    "totalDownloads": 456,
     "license": "MIT",
     "tags": [
       "masonry",
@@ -193,8 +193,8 @@
     "name": "motionchart",
     "description": "Cinematic React chart library focused on animated storytelling, motion, and presentation-first data visuals.",
     "version": "0.2.0",
-    "weeklyDownloads": 5,
-    "totalDownloads": 379,
+    "weeklyDownloads": 3,
+    "totalDownloads": 382,
     "license": "MIT",
     "tags": [
       "react",
@@ -214,8 +214,8 @@
     "name": "changelog-from-commits",
     "description": "Generate a polished CHANGELOG.md from git history using Conventional Commits. Zero config, zero runtime dependencies, monorepo and gitmoji aware.",
     "version": "0.1.1",
-    "weeklyDownloads": 310,
-    "totalDownloads": 310,
+    "weeklyDownloads": 320,
+    "totalDownloads": 330,
     "license": "MIT",
     "tags": [
       "changelog",
@@ -229,5 +229,26 @@
     "publishedAt": "2026-08-23",
     "color": "#16a34a",
     "icon": "CC"
+  },
+  {
+    "id": "onyxkit",
+    "name": "onyxkit",
+    "description": "A lightweight React UI component library built on Tailwind CSS with zero runtime overhead.",
+    "version": "0.2.0",
+    "weeklyDownloads": 0,
+    "totalDownloads": 0,
+    "license": "MIT",
+    "tags": [
+      "react",
+      "ui",
+      "components",
+      "tailwindcss"
+    ],
+    "npm": "https://www.npmjs.com/package/onyxkit",
+    "github": "https://github.com/LittleBoy9/onyxkit",
+    "homepage": "https://onyxkit.vercel.app",
+    "publishedAt": "2026-08-31",
+    "color": "#64748b",
+    "icon": "OK"
   }
 ]

@@ -53,7 +53,7 @@
 
   <!-- Right side — package count card -->
   <rect x="860" y="200" width="260" height="140" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-  <text id="pkg-count" x="980" y="256" text-anchor="middle" font-family="monospace" font-weight="700" font-size="52" fill="#f8fafc">11</text>
+  <text id="pkg-count" x="980" y="256" text-anchor="middle" font-family="monospace" font-weight="700" font-size="52" fill="#f8fafc">12</text>
   <text x="980" y="286" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748b" letter-spacing="2">PACKAGES PUBLISHED</text>
 
   <!-- MIT badge bottom right -->

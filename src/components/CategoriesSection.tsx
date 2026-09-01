@@ -6,7 +6,7 @@ const categories = [
     name: 'CLI & Developer Tools',
     description:
       'Terminal dashboards, Git analysis, and command-line utilities built for developer productivity and observability.',
-    packages: 'termiwatch, git-vision',
+    packages: 'termiwatch, git-vision, changelog-from-commits',
   },
   {
     name: 'Backend & Node.js',
@@ -17,8 +17,8 @@ const categories = [
   {
     name: 'React & Visualization',
     description:
-      'UI components, animated charts, color editors, and layout libraries for modern React applications.',
-    packages: 'instaskeleton, motionchart, rgb-curve, smart-masonry-grid',
+      'A Tailwind CSS component library, skeleton loaders, animated charts, color editors, and layout primitives for modern React applications.',
+    packages: 'onyxkit, instaskeleton, motionchart, rgb-curve, smart-masonry-grid',
   },
   {
     name: 'Browser SDKs',

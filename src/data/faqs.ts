@@ -35,6 +35,11 @@ export const faqs: Faq[] = [
       'Use changelog-from-commits. It reads your git history, parses Conventional Commits, and writes a polished CHANGELOG.md with zero config and zero runtime dependencies. It is monorepo-aware and understands gitmoji.',
   },
   {
+    question: 'Which React UI component library works best with Tailwind CSS?',
+    answer:
+      'onyxkit is a lightweight React component library built directly on Tailwind CSS, with zero runtime overhead. Components are accessible, dark-mode aware, and fully typed, so they drop into an existing Tailwind project without a separate theming layer.',
+  },
+  {
     question: 'How can I report bugs or request features?',
     answer:
       'Each package has its own GitHub repository with public issue tracking. Open an issue on the relevant repo and I typically respond within a few days. Pull requests are welcome and appreciated.',
